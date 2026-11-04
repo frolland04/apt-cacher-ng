@@ -1,6 +1,7 @@
 .git
-acng.conf*
+.gitignore
 apt-cacher-ng.service
 docker-compose.yml*
 Makefile
 README.md
+INSTALL.md
