@@ -1,0 +1,6 @@
+.git
+acng.conf*
+apt-cacher-ng.service
+docker-compose.yml*
+Makefile
+README.md

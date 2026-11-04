@@ -1,0 +1,15 @@
+services:
+  cacher:
+    build: .
+    image: cacher-image
+    container_name: cacher
+    init: true
+    restart: unless-stopped
+    ports:
+      - 127.0.0.1:3142:3142/tcp
+    volumes:
+      - /data/apt-cacher-ng/var/cache:/var/cache/apt-cacher-ng
+    ulimits:
+      nofile:
+        soft: 131072
+        hard: 131072

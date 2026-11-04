@@ -1,0 +1,15 @@
+[Unit]
+Description=APT Cache
+After=docker.service systemd-networkd.service systemd-resolved.service
+Requires=docker.service
+Documentation=https://github.com/sameersbn/docker-apt-cacher-ng
+
+[Service]
+Type=simple
+Restart=on-failure
+RestartSec=5
+ExecStart=/usr/bin/docker compose -f /opt/apt-cacher-ng/docker-compose.yml up
+ExecStop =/usr/bin/docker compose -f /opt/apt-cacher-ng/docker-compose.yml stop
+
+[Install]
+WantedBy=multi-user.target
