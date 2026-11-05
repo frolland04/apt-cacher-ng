@@ -45,8 +45,8 @@ RUN cat <<EOF >> ${APT_CACHER_NG_CONF_FILE}
 ExThreshold: 30
 FollowIndexFileRemoval: 0
 ForeGround: 1
-VerboseLog: 0
-DnsCacheSeconds: 180
+VerboseLog: 1
+DnsCacheSeconds: 360
 DlMaxRetries: 20
 # end of config
 EOF
